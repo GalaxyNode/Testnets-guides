@@ -18,13 +18,13 @@
 | <a href="https://explorer.nibiru.fi/nibiru-itn-1" target="_explorer">Explorer</a> |  Check whether your validator is created successfully |
 
 
- <p align="center"><a href="https://docs.nibiru.fi/"><img align="right"width="100px"alt="nibiru" src="https://i.ibb.co/865XFvQ/Niburu.png"></p</a>
+ <p align="center"><a href="https://docs.defund.app/"><img align="right"width="100px"alt="defund" src="https://ibb.co/wJ88mhx"></p</a>
 
 | Minimum configuration                                                                                |
 |------------------------------------------------------------------------------------------------------|
 - 4 CPU                                                                                                
-- 16 GB RAM (The requirements written in the official tutorial are too high, the actual 8GB+ is enough) 
-- 160GB SSD                                                                                            
+- 8 GB RAM
+- 250GB SSD                                                                                            
 
 --- 
 ### -Install the basic environment
@@ -60,14 +60,14 @@ sudo apt install curl tar wget clang pkg-config libssl-dev jq build-essential bs
 
 ```
 cd
-git clone https://github.com/NibiruChain/nibiru
-cd nibiru
-git checkout v0.19.2
+git clone [https://github.com/NibiruChain/nibiru](https://github.com/defund-labs/defund)
+cd defund
+git checkout v0.2.6
 make install
 ```
-After the installation is complete, you can run `nibid version` to check whether the installation is successful.
+After the installation is complete, you can run `defundd version` to check whether the installation is successful.
 
-Display should be v0.19.2
+Display should be v0.2.6
 <a id="run"></a>
 ### -Run node
 
@@ -75,63 +75,48 @@ Display should be v0.19.2
 
 ```
 moniker=YOUR_MONIKER_NAME
-nibid init $moniker --chain-id=nibiru-itn-1
-nibid config chain-id nibiru-itn-1
+defundd init $moniker --chain-id=orbit-alpha-1
+defundd config chain-id orbit-alpha-1
 ```
 
 #### Download the Genesis file
 
 ```
-curl -s https://rpc.itn-1.nibiru.fi/genesis | jq -r .result.genesis > $HOME/.nibid/config/genesis.json
+curl -s https://raw.githubusercontent.com/defund-labs/testnet/main/orbit-alpha-1/genesis.json > ~/.defund/config/genesis.json
 ```
 
 #### Set peer and seed
 
 ```
-SEEDS="3f472746f46493309650e5a033076689996c8881@nibiru-testnet.rpc.kjnodes.com:39659,a431d3d1b451629a21799963d9eb10d83e261d2c@seed-1.itn-1.nibiru.fi:26656,6a78a2a5f19c93661a493ecbe69afc72b5c54117@seed-2.itn-1.nibiru.fi:26656"
-PEERS=""
-sed -i 's|^seeds *=.*|seeds = "'$SEEDS'"|; s|^persistent_peers *=.*|persistent_peers = "'$PEERS'"|' $HOME/.nibid/config/config.toml
+SEEDS="f902d7562b7687000334369c491654e176afd26d@170.187.157.19:26656,2b76e96658f5e5a5130bc96d63f016073579b72d@rpc-1.defund.nodes.guru:45656"
+PEERS="f902d7562b7687000334369c491654e176afd26d@170.187.157.19:26656,f8093378e2e5e8fc313f9285e96e70a11e4b58d5@rpc-2.defund.nodes.guru:45656,878c7b70a38f041d49928dc02418619f85eecbf6@rpc-3.defund.nodes.guru:45656,3594b1f46c6321d9f99cda8ad5ef5a367ce06ccf@199.247.16.116:26656"
+sed -i 's|^seeds *=.*|seeds = "'$SEEDS'"|; s|^persistent_peers *=.*|persistent_peers = "'$PEERS'"|' $HOME/.defund/config/config.toml
 ```
 [Up to sections ↑](#anchor)
 
 #### Pruning settings
 ```
-sed -i 's|^pruning *=.*|pruning = "custom"|g' $HOME/.nibid/config/app.toml
-sed -i 's|^pruning-keep-recent  *=.*|pruning-keep-recent = "100"|g' $HOME/.nibid/config/app.toml
-sed -i 's|^pruning-interval *=.*|pruning-interval = "10"|g' $HOME/.nibid/config/app.toml
-sed -i 's|^snapshot-interval *=.*|snapshot-interval = 2000|g' $HOME/.nibid/config/app.toml
+sed -i 's|^pruning *=.*|pruning = "custom"|g' $HOME/.defund/config/app.toml
+sed -i 's|^pruning-keep-recent  *=.*|pruning-keep-recent = "100"|g' $HOME/.defund/config/app.toml
+sed -i 's|^pruning-interval *=.*|pruning-interval = "10"|g' $HOME/.defund/config/app.toml
+sed -i 's|^snapshot-interval *=.*|snapshot-interval = 2000|g' $HOME/.defund/config/app.toml
   
- sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.0001unibi"|g' $HOME/.nibid/config/app.toml
-sed -i 's|^prometheus *=.*|prometheus = true|' $HOME/.nibid/config/config.toml
+ sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.0001unibi"|g' $HOME/.defund/config/app.toml
+sed -i 's|^prometheus *=.*|prometheus = true|' $HOME/.defund/config/config.toml
 ```
-#### State-sync
+#### State-sync SOON
 ```
-SNAP_RPC="https://nibiru-testnet.nodejumper.io:443"
-
-LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height)
-BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000))
-TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash)
-
-echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
-
-PEERS="a1b96d1437fb82d3d77823ecbd565c6268f06e34@nibiru-testnet.nodejumper.io:27656"
-sed -i 's|^persistent_peers *=.*|persistent_peers = "'$PEERS'"|' $HOME/.nibid/config/config.toml
-
-sed -i 's|^enable *=.*|enable = true|' $HOME/.nibid/config/config.toml
-sed -i 's|^rpc_servers *=.*|rpc_servers = "'$SNAP_RPC,$SNAP_RPC'"|' $HOME/.nibid/config/config.toml
-sed -i 's|^trust_height *=.*|trust_height = '$BLOCK_HEIGHT'|' $HOME/.nibid/config/config.toml
-sed -i 's|^trust_hash *=.*|trust_hash = "'$TRUST_HASH'"|' $HOME/.nibid/config/config.toml
-``` 
+  
 [Up to sections ↑](#anchor)
 #### Start node 
 ```
-sudo tee <<EOF >/dev/null /etc/systemd/system/nibid.service
+sudo tee <<EOF >/dev/null /etc/systemd/system/defundd.service
 [Unit]
-Description=nibid daemon
+Description=defund daemon
 After=network-online.target
 [Service]
 User=$USER
-ExecStart=$(which nibid) start
+ExecStart=$(which defundd) start
 Restart=on-failure
 RestartSec=3
 LimitNOFILE=10000
@@ -141,14 +126,14 @@ EOF
 ```
 ```
 sudo systemctl daemon-reload && \
-sudo systemctl enable nibid && \
-sudo systemctl start nibid
+sudo systemctl enable defundd && \
+sudo systemctl start defundd
 ```
 ___
 
 #### Show log
 ```
-sudo journalctl -u nibid -f
+sudo journalctl -u defundd -f
 ```
 #### Check sync status
 ```
@@ -159,19 +144,19 @@ The display `"catching_up":` shows `false` that it has been synchronized. Synchr
 [Up to sections ↑](#anchor)
 #### Replace addrbook
 ```
-wget -O $HOME/.nibid/config/addrbook.json "https://raw.githubusercontent.com/GalaxyNode/Testnets-guides/main/Nibiru/addrbook.json"
+wget -O $HOME/.defund/config/addrbook.json "https://raw.githubusercontent.com/GalaxyNode/Testnets-guides/main/Defund/addrbook.json"
 ```
 <a id="validator"></a>
 ### Create a validator
 #### Create wallet
 ```
-nibid keys add WALLET_NAME
+defundd keys add WALLET_NAME
 ```
 ----
 ## `Note please save the mnemonic and priv_validator_key.json file! If you don't save it, you won't be able to restore it later.`
 ----
 ### Receive test coins
-#### Go to nibiru discord https://discord.gg/nsV3a5CdC9
+#### Go to defund discord https://discord.gg/fBuVNTFq
 [Up to sections ↑](#anchor)
 #### Sent in #faucet channel
 ```
@@ -179,16 +164,16 @@ $request WALLET_ADDRESS
 ```
 #### Can be used later
 ```
-nibid query bank balances WALLET_ADDRESS
+defundd query bank balances WALLET_ADDRESS
 ```
 #### Query the test currency balance.
 #### Create a validator
 `After enough test coins are obtained and the node is synchronized, a validator can be created. Only validators whose pledge amount is in the top 100 are active validators.`
 ```
-daemon=nibid
-denom=unibi
+daemon=defundd
+denom=ufetf
 moniker=MONIKER_NAME
-chainid=nibiru-itn-1
+chainid=orbit-alpha-1
 $daemon tx staking create-validator \
     --amount=1000000$denom \
     --pubkey=$($daemon tendermint show-validator) \
@@ -198,7 +183,7 @@ $daemon tx staking create-validator \
     --commission-max-rate=0.1 \
     --commission-max-change-rate=0.1 \
     --min-self-delegation=1000000 \
-    --fees 5000$denom \
+    --fees 0$denom \
     --from=WALLET_NAME\
     --yes
 ```
@@ -212,11 +197,11 @@ $daemon tx staking create-validator \
     <tbody>
         <tr valign="top">
           <td>
-            <a href="https://nibiru.fi/" target="site">Official website</a> </td>
-          <td><a href="https://twitter.com/NibiruChain" target="twitt">Official twitter</a> </td> 
-          <td><a href="https://discord.gg/nsV3a5CdC9" target="discord">Discord</a></td> 
-          <td><a href="https://github.com/NibiruChain" target="git">Github</a> </td>
-          <td><a href="https://docs.nibiru.fi/" target="doc">Documentation</a></td>   </tr>
+            <a href="https://defund.app/" target="site">Official website</a> </td>
+          <td><a href="https://twitter.com/defund_finance" target="twitt">Official twitter</a> </td> 
+          <td><a href="https://discord.gg/fBuVNTFq" target="discord">Discord</a></td> 
+          <td><a href="https://github.com/defund-labs/defund" target="git">Github</a> </td>
+          <td><a href="https://docs.defund.app/" target="doc">Documentation</a></td>   </tr>
     </tbody>
 </table> 
 

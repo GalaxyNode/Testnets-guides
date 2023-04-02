@@ -1,15 +1,11 @@
 <a id="anchor"></a>
-# Nibiru public Nibiru's incentivized testnet node tutorial 
+# Nibiru testnet guide
 
-
-
-[<img align="right" alt="Personal Website" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" />][nibiru-website]
-[<img align="right" alt="Nibiru Discord" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/discord.svg" />][nibiru-discord]
-[<img align="right" alt="Nibiru Medium Blog" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/medium.svg"/>][nibiru-medium]
-
-[nibiru-medium]: https://blog.nibiru.fi
-[nibiru-website]: https://docs.nibiru.fi
-[nibiru-discord]: https://discord.com/invite/pgArXgAxDD
+<p align="right">
+  <a href="https://discord.gg/nibiru"><img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" /></a> &nbsp;
+  <a href="https://twitter.com/NibiruChain"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" /></a> &nbsp;
+  <a href="https://blog.nibiru.fi"><img src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white" /></a> &nbsp;
+</p>
 
 |Sections|Description|
 |-----------------------:|------------------------------------------:|

@@ -15,7 +15,7 @@
 | [Install other necessary environments](#necessary) | Clone repository. Compilation project |
 | [Run Node](#run) |  Initialize node. Create configuration files. Check logs & sync status. |
 | [Create Validator](#validator) |  Create valdator & wallet, check your balance. |
-| <a href="https://explorer.nibiru.fi/nibiru-itn-1" target="_explorer">Explorer</a> |  Check whether your validator is created successfully |
+| <a href="https://defund.explorers.guru/validators" target="_explorer">Explorer</a> |  Check whether your validator is created successfully |
 
 
  <p align="center"><a href="https://docs.defund.app/"><img align="right"width="100px"alt="defund" src="https://ibb.co/wJ88mhx"></p</a>
@@ -188,7 +188,7 @@ $daemon tx staking create-validator \
     --yes
 ```
 
-#### After that, you can go to the block [explorer](explorer.nibiru.fi/nibiru-itn-1) to check whether your validator is created successfully.
+#### After that, you can go to the block [explorer](https://defund.explorers.guru/validators) to check whether your validator is created successfully.
 ----
 
   <h4 align="center"> More information </h4>

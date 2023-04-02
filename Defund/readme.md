@@ -124,13 +124,13 @@ LimitNOFILE=10000
 WantedBy=multi-user.target
 EOF
 ```
+  
 ```
 sudo systemctl daemon-reload && \
 sudo systemctl enable defundd && \
-sudo systemctl start defundd
+sudo systemctl start defundd 
 ```
-___
-```
+  
 #### Show log
 ```
 sudo journalctl -u defundd -f

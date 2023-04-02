@@ -104,8 +104,6 @@ sed -i 's|^snapshot-interval *=.*|snapshot-interval = 2000|g' $HOME/.defund/conf
  sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.0001unibi"|g' $HOME/.defund/config/app.toml
 sed -i 's|^prometheus *=.*|prometheus = true|' $HOME/.defund/config/config.toml
 ```
-#### State-sync SOON
-```
 #### Start node 
 ```
 sudo tee <<EOF >/dev/null /etc/systemd/system/defundd.service

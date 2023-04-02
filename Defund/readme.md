@@ -106,8 +106,6 @@ sed -i 's|^prometheus *=.*|prometheus = true|' $HOME/.defund/config/config.toml
 ```
 #### State-sync SOON
 ```
-  
-[Up to sections ↑](#anchor)
 #### Start node 
 ```
 sudo tee <<EOF >/dev/null /etc/systemd/system/defundd.service

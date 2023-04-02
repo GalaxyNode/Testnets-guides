@@ -18,7 +18,7 @@
 | <a href="https://defund.explorers.guru/validators" target="_explorer">Explorer</a> |  Check whether your validator is created successfully |
 
 
- <p align="center"><a href="https://docs.defund.app/"><img align="right"width="100px"alt="defund" src="https://ibb.co/wJ88mhx"></p</a>
+ <p align="center"><a href="https://docs.defund.app/"><img align="right"width="100px"alt="defund" src="https://i.ibb.co/WD77JvY/Z62v-C92-400x400.jpg"></p</a>
 
 | Minimum configuration                                                                                |
 |------------------------------------------------------------------------------------------------------|

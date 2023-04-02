@@ -1,1 +1,1 @@
-# Testnets-guides
+# Testnet guides for projects on Cosmos

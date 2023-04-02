@@ -130,7 +130,7 @@ sudo systemctl enable defundd && \
 sudo systemctl start defundd
 ```
 ___
-
+```
 #### Show log
 ```
 sudo journalctl -u defundd -f

@@ -17,7 +17,7 @@
 | [Install other necessary environments](#necessary) | Clone repository. Compilation project |
 | [Run Node](#run) |  Initialize node. Create configuration files. Check logs & sync status. |
 | [Create Validator](#validator) |  Create valdator & wallet, check your balance. |
-| <a href="https://explorer.stake-take.com/nibiru-testnet" target="_explorer">Explorer</a> |  Check whether your validator is created successfully |
+| <a href="https://explorer.nibiru.fi/nibiru-itn-1" target="_explorer">Explorer</a> |  Check whether your validator is created successfully |
 
 
  <p align="center"><a href="https://docs.nibiru.fi/"><img align="right"width="100px"alt="nibiru" src="https://i.ibb.co/865XFvQ/Niburu.png"></p</a>
@@ -106,7 +106,7 @@ sed -i 's|^snapshot-interval *=.*|snapshot-interval = 2000|g' $HOME/.nibid/confi
  sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.0001unibi"|g' $HOME/.nibid/config/app.toml
 sed -i 's|^prometheus *=.*|prometheus = true|' $HOME/.nibid/config/config.toml
 ```
-#### State-sync fast synchronization
+#### State-sync
 ```
 SNAP_RPC="https://nibiru-testnet.nodejumper.io:443"
 
@@ -123,7 +123,7 @@ sed -i 's|^enable *=.*|enable = true|' $HOME/.nibid/config/config.toml
 sed -i 's|^rpc_servers *=.*|rpc_servers = "'$SNAP_RPC,$SNAP_RPC'"|' $HOME/.nibid/config/config.toml
 sed -i 's|^trust_height *=.*|trust_height = '$BLOCK_HEIGHT'|' $HOME/.nibid/config/config.toml
 sed -i 's|^trust_hash *=.*|trust_hash = "'$TRUST_HASH'"|' $HOME/.nibid/config/config.toml
-```
+``` 
 [Up to sections ↑](#anchor)
 #### Start node 
 ```
@@ -161,7 +161,7 @@ The display `"catching_up":` shows `false` that it has been synchronized. Synchr
 [Up to sections ↑](#anchor)
 #### Replace addrbook
 ```
-wget -O $HOME/.nibid/config/addrbook.json "https://raw.githubusercontent.com/StakeTake/guidecosmos/main/Nibiru/nibiru-itn-1/addrbook.json"
+wget -O $HOME/.nibid/config/addrbook.json "https://raw.githubusercontent.com/GalaxyNode/Testnets-guides/main/Nibiru/addrbook.json"
 ```
 <a id="validator"></a>
 ### Create a validator
@@ -205,8 +205,7 @@ $daemon tx staking create-validator \
     --yes
 ```
 
-#### After that, you can go to the block [explorer](https://explorer.stake-take.com/nibiru-testnet) to check whether your validator is created successfully.
-And [other guides](https://github.com/StakeTake/guidecosmos)
+#### After that, you can go to the block [explorer](explorer.nibiru.fi/nibiru-itn-1) to check whether your validator is created successfully.
 ----
 
   <h4 align="center"> More information </h4>

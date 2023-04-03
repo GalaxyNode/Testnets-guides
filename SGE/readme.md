@@ -71,7 +71,7 @@ make install
 ```
 After the installation is complete, you can run `defundd version` to check whether the installation is successful.
 
-Display should be v0.2.6
+Display should be v0.0.5
 <a id="run"></a>
 ### -Run node
 

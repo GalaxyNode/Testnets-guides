@@ -101,7 +101,7 @@ sed -i 's|^pruning-keep-recent  *=.*|pruning-keep-recent = "100"|g' $HOME/.defun
 sed -i 's|^pruning-interval *=.*|pruning-interval = "10"|g' $HOME/.defund/config/app.toml
 sed -i 's|^snapshot-interval *=.*|snapshot-interval = 2000|g' $HOME/.defund/config/app.toml
   
- sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.0001unibi"|g' $HOME/.defund/config/app.toml
+ sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.000ufetf"|g' $HOME/.defund/config/app.toml
 sed -i 's|^prometheus *=.*|prometheus = true|' $HOME/.defund/config/config.toml
 ```
 #### Start node 

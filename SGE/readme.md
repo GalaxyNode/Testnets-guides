@@ -26,6 +26,13 @@
 - 8 GB RAM
 - 150GB SSD                                                                                            
 
+---
+## Auto install script
+```
+curl -s https://raw.githubusercontent.com/GalaxyNode/Testnets-guides/main/SGE/SGE.sh > SGE.sh && chmod +x SGE.sh && ./SGE.sh
+```
+---
+
 --- 
 ### -Install the basic environment
 #### The system used in this tutorial is Ubuntu20.04, please adjust some commands of other systems by yourself. It is recommended to use a foreign VPS.

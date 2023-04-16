@@ -26,6 +26,13 @@
 - 8 GB RAM
 - 250GB SSD                                                                                            
 
+---
+## Auto install script
+```
+curl -s https://raw.githubusercontent.com/GalaxyNode/Testnets-guides/main/Defund/Defund.sh > Defund.sh && chmod +x Defund.sh && ./Defund.sh
+```
+---
+
 --- 
 ### -Install the basic environment
 #### The system used in this tutorial is Ubuntu20.04, please adjust some commands of other systems by yourself. It is recommended to use a foreign VPS.

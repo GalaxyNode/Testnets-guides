@@ -65,7 +65,7 @@ cd ojo
 git checkout v0.1.2
 make install
 ```
-After the installation is complete, you can run `defundd version` to check whether the installation is successful.
+After the installation is complete, you can run `ojod version` to check whether the installation is successful.
 
 Display should be v0.1.2
 <a id="run"></a>

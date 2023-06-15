@@ -141,7 +141,7 @@ The display `"catching_up":` shows `false` that it has been synchronized. Synchr
 [Up to sections ↑](#anchor)
 #### Replace addrbook
 ```
-wget -O $HOME/.saod/config/addrbook.json "https://raw.githubusercontent.com/GalaxyNode/Testnets-guides/main/sao/addrbook.json"
+wget -O $HOME/.saod/config/addrbook.json "https://raw.githubusercontent.com/GalaxyNode/Testnets-guides/main/SAO/addrbook.json"
 ```
 <a id="validator"></a>
 ### Create a validator

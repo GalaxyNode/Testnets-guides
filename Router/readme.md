@@ -47,6 +47,10 @@ source $HOME/.profile
 ```
 go version
 ```
+#### Libwasm compatibility
+```
+sudo wget -P /usr/lib https://github.com/CosmWasm/wasmvm/raw/main/internal/api/libwasmvm.x86_64.so
+```
 <a id="necessary"></a>
 [Up to sections ↑](#anchor)
 ### -Install other necessary environments
@@ -65,6 +69,7 @@ wget https://ss.nodeist.net/t/router/routerd
 chmod +x routerd
 mv routerd $HOME/go/bin/
 ```
+After the installation is complete, you can run `routerd version` to check whether the installation is successful.
 <a id="run"></a>
 ### -Run node
 

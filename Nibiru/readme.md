@@ -16,7 +16,7 @@
 | <a href="https://explorer.nibiru.fi/nibiru-itn-1" target="_explorer">Explorer</a> |  Check whether your validator is created successfully |
 
 
- <p align="center"><a href="https://docs.nibiru.fi/"><img align="right"width="100px"alt="nibiru" src="https://i.ibb.co/865XFvQ/Niburu.png"></p</a>
+ <p align="center"><a href="https://docs.nibiru.fi/"><img align="right"width="100px"alt="nibiru" src="https://i.ibb.co/4mB3h0b/Z5-Sn-S2-YP-400x400.jpg"></p</a>
 
 | Minimum configuration                                                                                |
 |------------------------------------------------------------------------------------------------------|

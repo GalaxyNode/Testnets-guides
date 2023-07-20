@@ -4,9 +4,9 @@
 
 
 <p align="right">
-  <a href="https://discord.com/invite/q58XsnQqQF"><img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" /></a> &nbsp;
-  <a href="https://twitter.com/routerdNetwork"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" /></a> &nbsp;
-  <a href="https://medium.com/@routerdnetwork"><img src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white" /></a> &nbsp;
+  <a href="https://discord.com/invite/yjM2fUUHvN"><img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" /></a> &nbsp;
+  <a href="https://twitter.com/routerprotocol"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" /></a> &nbsp;
+  <a href="https://routerprotocol.medium.com/"><img src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white" /></a> &nbsp;
 </p>
 
 |Sections|Description|

@@ -147,7 +147,7 @@ The display `"catching_up":` shows `false` that it has been synchronized. Synchr
 [Up to sections ↑](#anchor)
 #### Replace addrbook
 ```
-wget -O $HOME/.entangled/config/addrbook.json "https://raw.githubusercontent.com/GalaxyNode/Testnets-guides/main/entangle/addrbook.json"
+wget -O $HOME/.entangled/config/addrbook.json "https://github.com/GalaxyNode/Testnets-guides/blob/main/Entangle/addrbook.json"
 ```
 <a id="validator"></a>
 ### Create a validator

@@ -52,7 +52,7 @@ make install
 entangled init $NODENAME --chain-id $CHAIN_ID
 cd $HOME/.entangle/config
 curl -s https://ss-t.entangle.nodestake.top/genesis.json > ~/.entangle/config/genesis.json
-wget -O $HOME/.entangle/config/addrbook.json "https://raw.githubusercontent.com/GalaxyNode/Testnets-guides/main/entangle/addrbook.json"
+wget -O $HOME/.entangle/config/addrbook.json "https://github.com/GalaxyNode/Testnets-guides/blob/main/Entangle/addrbook.json"
 
 
 

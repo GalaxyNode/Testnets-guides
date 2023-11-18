@@ -46,12 +46,12 @@ go version
 cd $HOME
 git clone https://github.com/SaoNetwork/sao-consensus.git
 cd sao-consensus
-git checkout v0.1.6
+git checkout v0.1.8
 make install
 
 saod init $NODENAME --chain-id $CHAIN_ID
 cd $HOME/.sao/config
-curl -s https://raw.githubusercontent.com/SAONetwork/sao-consensus/testnet0/network/testnet0/config/genesis.json > ~/.sao/config/genesis.json
+curl -s https://ss-t.sao.nodestake.top/genesis.json > ~/.sao/config/genesis.json
 wget -O $HOME/.sao/config/addrbook.json "https://raw.githubusercontent.com/GalaxyNode/Testnets-guides/main/SAO/addrbook.json"
 
 

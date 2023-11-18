@@ -62,13 +62,13 @@ sudo apt install curl tar wget clang pkg-config libssl-dev jq build-essential bs
 cd
 git clone https://github.com/SaoNetwork/sao-consensus.git
 cd sao-consensus
-git checkout v0.1.6
+git checkout v0.1.8
 make install
 saod version
 ```
 After the installation is complete, you can run `saod version` to check whether the installation is successful.
 
-Display should be v0.1.6
+Display should be v0.1.8
 <a id="run"></a>
 ### -Run node
 
@@ -83,7 +83,7 @@ saod config chain-id sao-testnet1
 #### Download the Genesis file
 
 ```
-curl -s https://raw.githubusercontent.com/SAONetwork/sao-consensus/testnet0/network/testnet0/config/genesis.json -O genesis.json > ~/.sao/config/genesis.json
+curl -s https://ss-t.sao.nodestake.top/genesis.json -O genesis.json > ~/.sao/config/genesis.json
 ```
 
 #### Set peer and seed

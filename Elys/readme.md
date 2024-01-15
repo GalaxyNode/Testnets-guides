@@ -60,12 +60,12 @@ sudo apt install curl tar wget clang pkg-config libssl-dev jq build-essential bs
 cd
 git clone https://github.com/elys-network/elys elys
 cd elys
-git checkout v0.17.0
+git checkout v0.26.0
 make install
 ```
 After the installation is complete, you can run `elysd version` to check whether the installation is successful.
 
-Display should be v0.17.0
+Display should be v0.26.0
 <a id="run"></a>
 ### -Run node
 

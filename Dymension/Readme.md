@@ -67,13 +67,14 @@ sudo apt install curl tar wget clang pkg-config libssl-dev jq build-essential bs
 
 ```
 cd $HOME
-git clone https://github.com/dymensionxyz/dymension.git --branch v1.0.2-beta
+git clone https://github.com/dymensionxyz/dymension.git
 cd dymension
+git checkout v2.0.0-alpha.8
 make install
 ```
 After the installation is complete, you can run `dymd version` to check whether the installation is successful.
 
-Display should be v1.0.2-beta
+Display should be v2.0.0-alpha.8
 <a id="run"></a>
 ### -Run node
 

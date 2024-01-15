@@ -44,8 +44,9 @@ go version
 
 #INSTALL
 cd $HOME
-ggit clone https://github.com/dymensionxyz/dymension.git --branch v1.0.2-beta
+git clone https://github.com/dymensionxyz/dymension.git
 cd dymension
+git checkout v2.0.0-alpha.8
 make install
 
 dymd init $NODENAME --chain-id $CHAIN_ID

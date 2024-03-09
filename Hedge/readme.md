@@ -16,7 +16,7 @@
 | <a href="https://testnet.itrocket.net/elys/staking" target="_explorer">Explorer</a> |  Check whether your validator is created successfully |
 
 
- <p align="center"><a href="https://docs.hedgeblock.io/"><img align="right"width="100px"alt="elys" src="https://i.ibb.co/2g6RkX5/Elys-Network-Logo.jpg"></p</a>
+ <p align="center"><a href="https://docs.hedgeblock.io/"><img align="right"width="100px"alt="Hedge" src="https://i.ibb.co/DzYMMcN/Hedge.jpg"></p</a>
 
 | Minimum configuration                                                                                |
 |------------------------------------------------------------------------------------------------------|
